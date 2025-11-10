@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Barbearia MadMan </title>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="img"> <img src="./MadMan.png"> </div>
+    <div class="nav"> <a href="#quem-somos">quem somos</a> <a href="#unidades">nossas unidades</a> <a
+        href="#servicos">cortes</a> <a href="#">agendar</a></div>
+    <div class="botao"> <a href="https://twitter.com/Dave_Conner" class="btn btn-1"> <svg>
+          <rect width="100%" height="100%" />
+        </svg> SEJA FRANQUEADO! </a> </div>
+  </div>
+  <div class="main">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img class="img1" src="c:\Users\Lucas\Downloads\interior-barbearia-moderna.webp" class="d-block w-100"
+            alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img class="img1"
+            src="bannerPrecos.png"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="img1" src="madManBarbershop.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="divisoria" style="background-color: #0c0c0c; height: 100px;">
+    </div>
+
+    <section id="quem-somos" class="quem-somos">
+
+      <div class="quem-somos-container">
+
+        <div class="quem-somos-imagem">
+          <img src="madmanmoto.png" alt="Barbeiro trabalhando ou imagem de moto">
+        </div>
+
+        <div class="quem-somos-texto">
+          <h2 style="color: #A52A2A;">Quem Somos?</h2>
+          <p>A MadMan Barbershop nasceu da mistura entre o ronco de um motor e o som da navalha raspando o couro. Aqui,
+            cabelo e barba não são só vaidade, são símbolo de atitude. Nosso espaço é pra quem curte o estilo livre, o
+            cheiro de gasolina, o som do rock e a sensação de mandar o mundo esperar enquanto a tesoura faz o seu
+            trabalho.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="unidades" class="quem-somos">
+      <!-- Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+      <header>
+        <img src="MadMan.png" alt="MadMan">
+        MadMan — Unidades (Região Sudeste)
+      </header>
+
+      <div id="map"></div>
+
+      <footer>
+        © MadMan Barbershop
+      </footer>
+
+
+
+      <section id="servicos">
+        <div class="container" style="max-width:1200px; margin:0 auto; padding:40px 20px;">
+          <h2 style="text-align:center; color:#c21010; font-size:2.8rem; margin-bottom:30px;">Cortes</h2>
+
+          <!-- 1. Clássicos do Asfalto (Cabelo) -->
+          <div class="categoria" style="margin-bottom:40px;">
+            <h3 style="color:#f4e285; text-transform:uppercase; margin-bottom:16px;">1. Clássicos do Asfalto (Cabelo)
+            </h3>
+            <div class="servico-grid">
+              <div class="card-servico">
+                <h4>Corte "Full Throttle"</h4>
+                <p>Corte completo com tesoura e máquina, lavagem com massagem e finalização profissional.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 60</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Ajuste Fino</h4>
+                <p>Manutenção rápida do corte, ideal para degradês e fades. Só máquina e acabamento leve.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 45</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Platinado Custom</h4>
+                <p>Descoloração e coloração personalizada (mechas, luzes ou tom total).</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 120</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Afiando a Lâmina (Barba) -->
+          <div class="categoria" style="margin-bottom:40px;">
+            <h3 style="color:#f4e285; text-transform:uppercase; margin-bottom:16px;">2. Afiando a Lâmina (Barba)</h3>
+            <div class="servico-grid">
+              <div class="card-servico">
+                <h4>Barba à Moda Antiga</h4>
+                <p>Ritual completo com navalha, toalha quente, espuma e pós-barba refrescante.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 45</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Design de Pista</h4>
+                <p>Desenho e contorno de barba, ideal pra manter o estilo afiado no dia a dia.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 35</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Barba & Máquina</h4>
+                <p>Barba ajustada com máquina e acabamento básico na navalha.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 40</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Pit Stop Kids (Cortes Infantis) -->
+          <div class="categoria" style="margin-bottom:40px;">
+            <h3 style="color:#f4e285; text-transform:uppercase; margin-bottom:16px;">3. Pit Stop Kids (Cortes Infantis)
+            </h3>
+            <div class="servico-grid">
+              <div class="card-servico">
+                <h4>Corte Júnior</h4>
+                <p>Corte moderno, rápido e cuidadoso (até 12 anos).</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 40</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Mini Degradê</h4>
+                <p>Degradê suave e estiloso pra molecada.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 45</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Corte Pai & Filho</h4>
+                <p>Corte adulto + corte infantil juntos (desconto especial).</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 90</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Pacotes & Combos -->
+          <div class="categoria" style="margin-bottom:40px;">
+            <h3 style="color:#f4e285; text-transform:uppercase; margin-bottom:16px;">4. Pacotes & Combos (O Pit Stop
+              Completo)</h3>
+            <div class="servico-grid">
+              <div class="card-servico">
+                <h4>Combo "Motorhead"</h4>
+                <p>Corte "Full Throttle" + Barba à Moda Antiga (ou Barba & Máquina).</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 95</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Customização Total</h4>
+                <p>Corte + Barba + Design de sobrancelhas. O pacote completo pra sair no estilo.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 110</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Upgrade de Óleo (Tratamentos) -->
+          <div class="categoria" style="margin-bottom:40px;">
+            <h3 style="color:#f4e285; text-transform:uppercase; margin-bottom:16px;">5. Upgrade de Óleo (Tratamentos e
+              Extras)</h3>
+            <div class="servico-grid">
+              <div class="card-servico">
+                <h4>Hidratação Capilar</h4>
+                <p>Tratamento profundo para restaurar brilho e força dos fios.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 35</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Limpeza de Para-brisa</h4>
+                <p>Design e limpeza de sobrancelhas com pinça ou navalha.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 25</strong>
+                  <button type="button" class="btn btn-danger">Agendar</button>
+                </div>
+              </div>
+
+              <div class="card-servico">
+                <h4>Massagem de Pista</h4>
+                <p>Massagem rápida no pescoço e ombros pra relaxar antes de voltar à estrada.</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                  <strong>R$ 30</strong>
+                  <a href="#agendamento"><button type="button" class="btn btn-danger">Agendar</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="agendamento" style="margin: 40px;">
+        <header>
+          Agendamento
+        </header>
+
+
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="valid-feedback">
+              Parece bom!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+              Parece bom!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">E-mail</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                required>
+              <div class="invalid-feedback">
+                Por favor insira um nome.
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Estado</label>
+            <select class="form-select" id="validationCustom04" required>
+            
+              <option selected disabled value="selecionar">Selecionar...</option>
+              <option>São Paulo</option>
+              <option>Campinas</option>
+              <option>Rio de Janeiro</option>
+              <option>Niterói</option>
+              <option>Belo Horizonte</option>
+              <option>Vitória</option>
+              <option>Porto Alegre</option>
+              <option>Curitiba</option>
+              <option>Florianópolis</option>
+              <option>Brasília</option>
+              <option>Goiânia</option>
+              <option>Salvador</option>
+              <option>Recife </option>
+              <option>Fortaleza</option>
+              <option>Belém </option>
+              <option>Manaus</option>
+              <option>Cuiabá</option>
+              <option>Campo Grande</option>
+              <option>Natal</option>
+              <option>João Pessoa</option>
+              <option>Teresina</option>
+              Por favor, insira um esstado válido.
+              </select>
+          </div> -->
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">unidade</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="selecionar">Selecionar...</option>
+              <option>MadMan SP - Paulista</option>
+              <option>MadMan Campinas</option>
+              <option>MadMan RJ - Copacabana</option>
+              <option>MadMan Niterói</option>
+              <option>MadMan BH</option>
+              <option>MadMan Vitória</option>
+              <option>MadMan Porto Alegre</option>
+              <option>MadMan Curitiba</option>
+              <option>MadMan Florianópolis</option>
+              <option>MadMan Brasília</option>
+              <option>MadMan Goiânia</option>
+              <option>MadMan Salvador</option>
+              <option>MadMan Recife</option>
+              <option>MadMan Fortaleza</option>
+              <option>MadMan Belém</option>
+              <option>MadMan Manaus</option>
+              <option>MadMan Cuiabá</option>
+              <option>MadMan Campo Grande</option>
+              <option>MadMan Natal</option>
+              <option>MadMan João Pessoa</option>
+              <option>MadMan Teresina</option>
+              
+            </select>
+            <div class="invalid-feedback">
+              Por favor selecione uma unidade válida.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">telefone</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="(21)99999-9999" required>
+            <div class="invalid-feedback">
+              Por favor insira um telefone válido.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Li e concordo com os temos e condições.
+              </label>
+              <div class="invalid-feedback">
+                Você precisa concordar antes de continuar.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Agendar</button>
+          </div>
+        </form>
+      </section>
+
+      </main>
+
+      <footer class="footer">
+        <p style="color:#fff; background-color: #0c0c0c; text-align:center; padding:20px;">© 2025 MadMan Barbershop —
+          Todos os direitos reservados.</p>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+      <!-- Leaflet JS -->
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // ---------- DADOS (Unidades da Barbearia MadMan) ----------
+  const units = [
+    { id: 1, name: "MadMan SP - Paulista", addr: "Av. Paulista, 1000 — São Paulo", city: "São Paulo", lat: -23.564, lng: -46.652 },
+    { id: 2, name: "MadMan Campinas", addr: "R. Conceição, 45 — Campinas", city: "Campinas", lat: -22.905, lng: -47.061 },
+    { id: 3, name: "MadMan RJ - Copacabana", addr: "Av. Atlântica, 200 — Rio de Janeiro", city: "Rio de Janeiro", lat: -22.971, lng: -43.182 },
+    { id: 4, name: "MadMan Niterói", addr: "Rua Álvares, 120 — Niterói", city: "Niterói", lat: -22.883, lng: -43.103 },
+    { id: 5, name: "MadMan BH", addr: "Av. Afonso Pena, 800 — Belo Horizonte", city: "Belo Horizonte", lat: -19.931, lng: -43.936 },
+    { id: 6, name: "MadMan Vitória", addr: "Av. Dante Micheline, 300 — Vitória", city: "Vitória", lat: -20.315, lng: -40.312 },
+    { id: 7, name: "MadMan Porto Alegre", addr: "Av. Ipiranga, 3000 — Porto Alegre", city: "Porto Alegre", lat: -30.033, lng: -51.230 },
+    { id: 8, name: "MadMan Curitiba", addr: "R. XV de Novembro, 900 — Curitiba", city: "Curitiba", lat: -25.428, lng: -49.273 },
+    { id: 9, name: "MadMan Florianópolis", addr: "Av. Beira Mar Norte, 1200 — Florianópolis", city: "Florianópolis", lat: -27.596, lng: -48.549 },
+    { id: 10, name: "MadMan Brasília", addr: "SCLS 210 Bloco B — Asa Sul", city: "Brasília", lat: -15.797, lng: -47.891 },
+    { id: 11, name: "MadMan Goiânia", addr: "Av. T-63, 1020 — Goiânia", city: "Goiânia", lat: -16.686, lng: -49.264 },
+    { id: 12, name: "MadMan Salvador", addr: "Av. Sete de Setembro, 900 — Salvador", city: "Salvador", lat: -12.973, lng: -38.502 },
+    { id: 13, name: "MadMan Recife", addr: "R. da Aurora, 700 — Recife", city: "Recife", lat: -8.047, lng: -34.877 },
+    { id: 14, name: "MadMan Fortaleza", addr: "Av. Beira Mar, 3000 — Fortaleza", city: "Fortaleza", lat: -3.717, lng: -38.543 },
+    { id: 15, name: "MadMan Belém", addr: "Trav. Nove de Janeiro, 200 — Belém", city: "Belém", lat: -1.455, lng: -48.503 },
+    { id: 16, name: "MadMan Manaus", addr: "Av. Djalma Batista, 1550 — Manaus", city: "Manaus", lat: -3.119, lng: -60.021 },
+    { id: 17, name: "MadMan Cuiabá", addr: "Av. Getúlio Vargas, 500 — Cuiabá", city: "Cuiabá", lat: -15.601, lng: -56.097 },
+    { id: 18, name: "MadMan Campo Grande", addr: "R. 14 de Julho, 1200 — Campo Grande", city: "Campo Grande", lat: -20.469, lng: -54.620 },
+    { id: 19, name: "MadMan Natal", addr: "Av. Eng. Roberto Freire, 800 — Natal", city: "Natal", lat: -5.794, lng: -35.211 },
+    { id: 20, name: "MadMan João Pessoa", addr: "Av. Epitácio Pessoa, 2000 — João Pessoa", city: "João Pessoa", lat: -7.115, lng: -34.864 },
+    { id: 21, name: "MadMan Teresina", addr: "Av. Frei Serafim, 900 — Teresina", city: "Teresina", lat: -5.092, lng: -42.803 }
+  ];
+  // ---------- FIM DOS DADOS ----------
+  
+  const map = L.map('map', { zoomControl: false }).setView([-15.8, -47.9], 5);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  function createMadmanIcon() {
+    const svg = `
+      <svg class="madman-marker" width="48" height="60" viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M24 2 C14 2 6 10 6 20 C6 36 24 58 24 58 C24 58 42 36 42 20 C42 10 34 2 24 2 Z"
+            fill="#0C0C0C" stroke="#B31217" stroke-width="2"/>
+          <circle cx="24" cy="20" r="8" fill="#B31217"/>
+          <rect x="12" y="40" width="24" height="6" rx="3" fill="#C5A572"/>
+        </g>
+      </svg>
+    `;
+    return L.divIcon({
+      className: '',
+      html: svg,
+      iconSize: [48, 60],
+      iconAnchor: [24, 58]
+    });
+  }
+
+  const madIcon = createMadmanIcon();
+
+  units.forEach(u => {
+    const marker = L.marker([u.lat, u.lng], { icon: madIcon }).addTo(map);
+    const popupHtml = `
+      <div>
+        <div class="unit-name">${u.name}</div>
+        <div class="unit-meta">${u.addr}</div>
+        <div class="unit-meta">${u.city}</div>
+        <a href="servicos.html" class="unit-link">Ver serviços</a>
+        &nbsp;
+        <a href="#agendamento" class="unit-link" style="background:var(--madman-red); color:#fff;">Agendar</a>
+      </div>
+    `;
+    marker.bindPopup(popupHtml, { minWidth: 200 });
+  });
+
+  const group = L.featureGroup(units.map(u => L.marker([u.lat, u.lng])));
+  map.fitBounds(group.getBounds());
+  
+
+  L.control.zoom({ position: 'topright' }).addTo(map);
+
+  function addUnit(name, addr, city, lat, lng) {
+    const newUnit = { id: Date.now(), name, addr, city, lat, lng };
+    units.push(newUnit);
+    const m = L.marker([lat, lng], { icon: madIcon }).addTo(map);
+    m.bindPopup(`<div class="unit-name">${name}</div><div class="unit-meta">${addr}</div><a href="agendamento.html" class="unit-link">Agendar</a>`);
+  }
+
+  window.addUnit = addUnit;
+</script>
+
+</body>
+
+</html>
