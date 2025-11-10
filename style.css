@@ -1,0 +1,479 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ .img img {
+     width: 100px;
+     height: 100px;
+ }
+
+ .header {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: #0C0C0C;
+ }
+
+ .nav {
+     gap: 20px;
+ }
+
+ .nav a {
+     position:
+         relative;
+     color: #F2F2F2;
+     /* branco fumaça */
+     text-decoration: none;
+     font-weight: 500;
+     transition: color 0.3s ease;
+ }
+
+ .nav a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0%;
+     height: 2px;
+     background-color: #B31217;
+     /* vermelho sangue de motor */
+     transition: width 0.3s ease;
+ }
+
+ .nav a:hover {
+     color: #C5A572;
+     /* bege couro velho, só um
+toque */
+ }
+
+ .nav a:hover::after {
+     width: 100%;
+ }
+
+ .btn-1 {
+     position: relative;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     background: #881c1f;
+     /* vermelho-sangue */
+     color: #fff;
+     font-weight: 600;
+     text-transform:
+         uppercase;
+     letter-spacing: 1px;
+     padding: 12px 30px;
+     border: none;
+     cursor: pointer;
+     overflow: hidden;
+     /* evita que o svg
+estoure */
+ }
+
+ .btn-1 svg {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+ }
+
+ .btn-1 rect {
+     fill: none;
+     stroke: #fff;
+     stroke-width: 3;
+     stroke-dasharray: 422, 0;
+     transition: all 0.35s linear;
+ }
+
+ .btn-1:hover {
+     background: rgb(66, 6, 6);
+     color: whitesmoke;
+ }
+
+ .btn-1:hover rect {
+     stroke-width: 5;
+     stroke-dasharray: 15, 310;
+     stroke-dashoffset: 48;
+     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+ }
+
+ /* .quem-somos {
+     background-image:
+         /* url('https://st3.depositphotos.com/3662505/14363/i/450/depositphotos_143633267-stock-photo-guy-in-motorbike-repair-shop.jpg');
+     background-size: 100%; 
+  }  */
+
+ .main h1,
+ h2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .main h1 {
+     padding-top: 80px;
+     font-size: 100px;
+     color: #a3070c;
+ }
+
+ .main h2 {
+     color: #C5A572;
+     ;
+
+ }
+
+ .fade-title,
+ .fade-subtitle {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: all 0.8s ease-out;
+ }
+
+ /* quando a
+classe .visible é adicionada pelo JS */
+ .fade-title.visible {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .fade-subtitle.visible {
+     opacity: 1;
+     transform: translateY(0);
+     transition-delay: 0.2s;
+     /* subtítulo vem logo depois */
+ }
+
+ @media (max-width: 768px) {
+     .main {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .box1,
+     .box2,
+     .box3 {
+         max-width: 90%;
+     }
+ }
+
+ /* .main { */
+     /* background-image: url('https://casaefesta.com/wp-content/uploads/2019/01/decoracao-de-barbearia-4.jpg');
+ } */
+
+ .img1 {
+     width: 100%;
+     height: 600px;
+     /* ou o tamanho que quiser */
+     object-fit: cover;
+     /* corta o excesso sem distorcer */
+     border-radius: 10px;
+     /* opcional, só pra dar estilo */
+ }
+ #servicos {
+  background: radial-gradient(circle at top left, #111 0%, #000 100%);
+  color: #eee;
+  padding: 5rem 2rem;
+  font-family: 'Bebas Neue', 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* textura leve tipo metal escovado */
+#servicos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  opacity: 0.1;
+}
+
+#servicos h2 {
+  text-align: center;
+  color: #c21010;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#servicos h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #c21010;
+  margin: 1rem auto 0;
+  border-radius: 4px;
+}
+
+#servicos h3 {
+  color: #f4e285;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 10px rgba(255, 200, 100, 0.3);
+}
+
+.servico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.card-servico {
+  background: linear-gradient(145deg, #181818, #0f0f0f);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #c21010;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-servico::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.card-servico:hover::before {
+  left: 100%;
+}
+
+.card-servico:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-left-color: #f4e285;
+}
+
+.card-servico h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-servico p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  #servicos {
+    padding: 3rem 1rem;
+  }
+
+  #servicos h2 {
+    font-size: 2.2rem;
+  }
+}
+.contain{
+    width: 500 px;
+}
+:root {
+          --madman-black: #0C0C0C;
+          --madman-red: #B31217;
+          --madman-beige: #C5A572;
+          --madman-white: #F2F2F2;
+        }
+
+        body {
+          margin: 0;
+          font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+          background: var(--madman-black);
+          color: var(--madman-white);
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        header {
+          padding: 18px 24px;
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(12, 12, 12, 0.98));
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        header img {
+          width: 72px;
+          height: 72px;
+          object-fit: contain;
+        }
+
+        header {
+          font-size: 2rem;
+          margin: 0;
+          color: var(--madman-red);
+          letter-spacing: 1px;
+        }
+
+        /* mapa ocupa a tela */
+        #map {
+          height: calc(200vh - 220px);
+          max-width: 900px;
+          border-top: 4px solid rgba(179, 18, 23, 0.9);
+          margin-left: 200px;
+        }
+
+        footer {
+          padding: 12px 18px;
+          text-align: center;
+          color: var(--madman-beige);
+          background: rgba(0, 0, 0, 0.85);
+        }
+
+        /* estilo custom pro popup (MadMan) */
+        .leaflet-popup-content-wrapper {
+          background: #0c0c0c;
+          border-radius: 10px;
+          border: 2px solid var(--madman-red);
+        }
+
+        .leaflet-popup-content {
+          color: var(--madman-white);
+          font-weight: 600;
+        }
+
+        .unit-name {
+          color: var(--madman-red);
+          font-size: 1.05rem;
+          margin-bottom: 6px;
+        }
+
+        .unit-meta {
+          color: var(--madman-beige);
+          font-size: 0.9rem;
+          margin-bottom: 6px;
+        }
+
+        .unit-link {
+          display: inline-block;
+          margin-top: 6px;
+          padding: 6px 10px;
+          border-radius: 6px;
+          text-decoration: none;
+          color: #0C0C0C;
+          background: var(--madman-beige);
+          font-weight: 700;
+        }
+
+        .unit-link:hover {
+          opacity: 0.9;
+        }
+
+        /* marcador SVG (apenas para centralizar) */
+        .madman-marker {
+          display: block;
+          transform: translate(-50%, -100%);
+          /* centraliza em relação ao ponto */
+          filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.6));
+        }
+
+        /* responsivo */
+        @media (max-width:600px) {
+          header h1 {
+            font-size: 1rem;
+          }
+        }
+
+        #map {
+          width: 100%;
+          height: 500px;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        /* 1. O Contêiner Principal */
+    .quem-somos-container {
+      display: flex;
+      /* Habilita o Flexbox */
+      align-items: center;
+      /* Alinha os itens verticalmente ao centro */
+      padding: 50px 0;
+      /* Espaçamento vertical */
+      max-width: 1200px;
+      /* Limita a largura do conteúdo */
+      margin: 0 auto;
+      /* Centraliza o contêiner na página */
+      gap: 50px;
+      /* Espaço entre a imagem e o texto */
+    }
+
+    /* 2. O Espaço da Imagem (Lado Esquerdo) */
+    .quem-somos-imagem {
+      flex: 1;
+      /* Ocupa metade do espaço */
+      text-align: center;
+
+    }
+
+    /* 3. O Espaço do Texto (Lado Direito) */
+    .quem-somos-texto {
+      flex: 1;
+      /* Ocupa metade do espaço */
+      padding-right: 20px;
+      /* Garante que o texto não toque a borda */
+    }
+
+    /* 4. Estilo para a Imagem */
+    .quem-somos-imagem img {
+      max-width: 700px;
+      height: 700px;
+      border-radius: 8px;
+      /* Opcional: Borda suave */
+    }
+
+    /* Ajuste para o seu texto/título */
+    .quem-somos-texto h2 {
+      color: #A52A2A;
+      /* Mantendo a cor original */
+      font-size: 4rem;
+      /* Ajuste o tamanho do título */
+      margin-bottom: 20px;
+    }
+
+    .quem-somos-texto p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* Ajuste de responsividade para telas menores (empilha imagem e texto) */
+    @media (max-width: 768px) {
+      .quem-somos-container {
+        flex-direction: column;
+        /* Coloca os itens um embaixo do outro */
+        padding: 30px 20px;
+      }
+
+      .quem-somos-imagem,
+      .quem-somos-texto {
+        flex: none;
+        /* Desabilita o flex para ocupar 100% da largura */
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .quem-somos-imagem {
+        margin-bottom: 30px;
+
+      }
+    }
