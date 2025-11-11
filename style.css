@@ -204,7 +204,7 @@ body {
 .contain { width: auto; }
 
 /* evita que imagens estourem */
-img { max-width:100px; height:auto; display:block; }
+img-madman { max-width:100px; height:auto; display:block; }
 
 /* spacing helpers */
 .section-pad { padding: 40px 0; }
