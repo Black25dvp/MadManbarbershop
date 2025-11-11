@@ -114,8 +114,7 @@ body {
 }
 
 .img1 {
-  width: 100%;
-  height: 100%; /* agora a imagem ocupa toda a altura do item */
+
   object-fit: cover; /* preenche cortando o excesso */
   border-radius: 10px;
   display: block;
