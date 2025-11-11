@@ -410,6 +410,13 @@
   // ---------- FIM DOS DADOS ----------
   
   const map = L.map('map', { zoomControl: false }).setView([-15.8, -47.9], 5);
+  var map = L.map('map', {
+    center: [-23.55052, -46.633308], // exemplo: São Paulo
+    zoom: 13,                        // zoom inicial
+    minZoom: 10,                      // zoom mínimo permitido
+    maxZoom: 16                       // zoom máximo permitido
+});
+
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
