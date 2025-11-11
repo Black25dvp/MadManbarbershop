@@ -1,9 +1,3 @@
-/* =========================
-   MADMAN BARBERSHOP - style.css
-   Substitui todo o CSS antigo por este.
-   Mantém a estética original e adiciona responsividade.
-   ========================= */
-
 /* ---------- ROOT / CORES ---------- */
 :root{
   --madman-black: #0C0C0C;
@@ -16,8 +10,16 @@
 }
 
 /* ---------- RESET BÁSICO ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
 html, body { height: 100%; }
+
 body {
   font-family: "Poppins", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   background: var(--madman-black);
@@ -29,11 +31,18 @@ body {
 }
 
 /* ---------- UTILS ---------- */
-.container-center { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-.small { font-size: 0.9rem; color: var(--madman-beige); }
+.container-center {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--madman-beige);
+}
 
 /* ---------- HEADER / NAV ---------- */
-/* Estrutura atual do HTML usa .header .nav .img .botao */
 .header {
   display: flex;
   align-items: center;
@@ -47,17 +56,19 @@ body {
   z-index: 1200;
 }
 
-/* logo */
-.img img { width:72px; height:72px; object-fit:contain; display:block; }
+.img img {
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  display:block;
+}
 
-/* nav links group */
 .nav {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-/* links */
 .nav a {
   position: relative;
   color: var(--madman-white);
@@ -78,11 +89,15 @@ body {
   background: var(--madman-red);
   transition: width .25s ease;
 }
-.nav a:hover{ color: var(--madman-beige); }
+
+.nav a:hover{
+  color: var(--madman-beige);
+}
+
 .nav a:hover::after { width:100%; }
 
-/* botão de destaque (franqueado) */
 .botao { margin-left: 8px; }
+
 .btn-1 {
   position: relative;
   display: inline-flex;
@@ -99,35 +114,46 @@ body {
   overflow: hidden;
   transition: transform .12s ease, background .2s ease;
 }
-.btn-1:hover { transform: translateY(-3px); background: #7a1115; }
 
-/* pequeno ajuste pra svg stroke do botão */
-.btn-1 svg { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:0.06; }
+.btn-1:hover {
+  transform: translateY(-3px);
+  background: #7a1115;
+}
+
+.btn-1 svg {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  opacity:0.06;
+}
 
 /* ---------- CARROSSEL ---------- */
-/* O HTML usa bootstrap, só ajustamos img e altura */
 .carousel-inner .carousel-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* altura consistente e responsiva */
+  height: 50vh; /* altura consistente */
 }
 
 .img1 {
-
-  object-fit: cover; /* preenche cortando o excesso */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
   display: block;
 }
-
-
-/* botões nativos do bootstrap mantidos */
 
 /* ---------- DIVISÓRIA ---------- */
 .divisoria { height: 100px; background: var(--madman-black); }
 
 /* ---------- QUEM SOMOS ---------- */
-.quem-somos { padding: 48px 0; background: linear-gradient(180deg, rgba(12,12,12,1), rgba(15,15,15,1)); }
+.quem-somos {
+  padding: 48px 0;
+  background: linear-gradient(180deg, rgba(12,12,12,1), rgba(15,15,15,1));
+}
+
 .quem-somos-container {
   display:flex;
   align-items:center;
@@ -136,14 +162,51 @@ body {
   margin: 0 auto;
   padding: 0 18px;
 }
-.quem-somos-imagem { flex:1; display:flex; justify-content:center; align-items:center; }
-.quem-somos-imagem img { max-width: 520px; width:100%; height:auto; border-radius:12px; object-fit:cover; }
-.quem-somos-texto { flex:1; padding: 0 8px; }
-.quem-somos-texto h2 { color: var(--madman-red); font-size: 2.6rem; margin-bottom:12px; }
-.quem-somos-texto p { color: #d8d8d8; font-size:1.05rem; max-width:720px; }
+
+.quem-somos-imagem {
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.quem-somos-imagem img {
+  max-width: 520px;
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.quem-somos-texto {
+  flex:1;
+  padding: 0 8px;
+}
+
+.quem-somos-texto h2 {
+  color: var(--madman-red);
+  font-size: 2.6rem;
+  margin-bottom:12px;
+}
+
+.quem-somos-texto p {
+  color: #d8d8d8;
+  font-size:1.05rem;
+  max-width:720px;
+}
 
 /* ---------- UNIDADES / MAPA ---------- */
-#unidades header { display:flex; align-items:center; gap:12px; color:var(--madman-beige); padding: 28px 18px 0; max-width:1200px; margin:0 auto; font-weight:700; }
+#unidades header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--madman-beige);
+  padding: 28px 18px 0;
+  max-width:1200px;
+  margin:0 auto;
+  font-weight:700;
+}
+
 #map {
   width: 100%;
   max-width: 1200px;
@@ -155,27 +218,73 @@ body {
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
 }
 
-/* Leaflet popup overrides (visual) */
-.leaflet-popup-content-wrapper { background: var(--madman-black); border-radius: 10px; border: 2px solid var(--madman-red); }
-.leaflet-popup-content { color: var(--madman-white); font-weight:700; }
+/* Leaflet popup overrides */
+.leaflet-popup-content-wrapper {
+  background: var(--madman-black);
+  border-radius: 10px;
+  border: 2px solid var(--madman-red);
+}
+
+.leaflet-popup-content {
+  color: var(--madman-white);
+  font-weight:700;
+}
+
 .unit-name { color: var(--madman-red); font-size:1rem; margin-bottom:6px; }
 .unit-meta { color: var(--madman-beige); font-size:0.9rem; margin-bottom:4px; }
-.unit-link { display:inline-block; padding:6px 10px; border-radius:6px; text-decoration:none; color:#0C0C0C; background:var(--madman-beige); font-weight:700; }
+.unit-link {
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:6px;
+  text-decoration:none;
+  color:#0C0C0C;
+  background:var(--madman-beige);
+  font-weight:700;
+}
+
+/* imagem do mapa com limite de tamanho */
+.img2 {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 /* ---------- SERVIÇOS ---------- */
 #servicos {
   padding: 56px 0;
   background: radial-gradient(circle at top left, #111 0%, #000 100%);
 }
-#servicos .container { max-width:1200px; margin:0 auto; padding:0 18px; }
-#servicos h2 { text-align:center; color:var(--madman-red); font-size:2.6rem; margin-bottom:18px; }
+
+#servicos .container {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 18px;
+}
+
+#servicos h2 {
+  text-align:center;
+  color:var(--madman-red);
+  font-size:2.6rem;
+  margin-bottom:18px;
+}
+
 .categoria { margin-bottom:36px; }
-.categoria h3 { color: var(--madman-beige); font-size:1.2rem; text-transform:uppercase; margin-bottom:14px; }
+
+.categoria h3 {
+  color: var(--madman-beige);
+  font-size:1.2rem;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
 .servico-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 .card-servico {
   background: linear-gradient(145deg, #171717, #0f0f0f);
   border-radius:12px;
@@ -184,84 +293,104 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.6);
   transition: transform .28s ease, border-left-color .28s ease;
 }
-.card-servico h4 { color:#fff; font-size:1.15rem; margin-bottom:8px; text-transform:uppercase; }
-.card-servico p { color:#ccc; font-size:0.96rem; margin-bottom:12px; }
-.card-servico .price-row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-.card-servico .price-row strong { color:var(--madman-beige); font-size:1.05rem; }
-.card-servico button { background:var(--madman-red); color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer; transition:background .2s ease; }
+
+.card-servico h4 {
+  color:#fff;
+  font-size:1.15rem;
+  margin-bottom:8px;
+  text-transform:uppercase;
+}
+
+.card-servico p {
+  color:#ccc;
+  font-size:0.96rem;
+  margin-bottom:12px;
+}
+
+.card-servico .price-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.card-servico .price-row strong {
+  color:var(--madman-beige);
+  font-size:1.05rem;
+}
+
+.card-servico button {
+  background:var(--madman-red);
+  color:#fff;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+
 .card-servico button:hover { background:#7a0f12; }
-.card-servico:hover { transform: translateY(-6px); border-left-color: var(--madman-beige); }
+.card-servico:hover {
+  transform: translateY(-6px);
+  border-left-color: var(--madman-beige);
+}
 
 /* ---------- AGENDAMENTO (form) ---------- */
-#agendamento { padding: 40px 18px; max-width:1200px; margin:0 auto; color:#eee; }
-#agendamento header { font-size:1.6rem; color:var(--madman-red); margin-bottom:12px; }
+#agendamento {
+  padding: 40px 18px;
+  max-width:1200px;
+  margin:0 auto;
+  color:#eee;
+}
+
+#agendamento header {
+  font-size:1.6rem;
+  color:var(--madman-red);
+  margin-bottom:12px;
+}
 
 /* ---------- RODAPÉ ---------- */
-.footer { margin-top: 36px; background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(12,12,12,0.95)); padding:18px 8px; color:var(--madman-beige); text-align:center; }
+.footer {
+  margin-top: 36px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(12,12,12,0.95));
+  padding:18px 8px;
+  color:var(--madman-beige);
+  text-align:center;
+}
 
 /* ---------- PEQUENAS CORREÇÕES / UTILITÁRIOS ---------- */
-/* conserta largura do contain que estava errado */
 .contain { width: auto; }
-
-/* evita que imagens estourem */
-.img2 { max-width:100px; height:auto; display:block; }
-
-/* spacing helpers */
+img:not(.img1):not(.img2) { max-width:100%; height:auto; display:block; }
 .section-pad { padding: 40px 0; }
 
 /* ---------- RESPONSIVIDADE ---------- */
-
-/* Medium screens: tablets / small laptops */
+/* Medium screens */
 @media (max-width: 992px) {
-
   .quem-somos-container { gap: 24px; padding: 0 14px; }
   #map { height: 420px; width: 95%; }
-
-  /* serviços para 2 colunas */
   .servico-grid { grid-template-columns: repeat(2, 1fr); }
   .img1 { height: 420px; object-fit: cover; }
 }
 
-/* Small screens: phones */
+/* Small screens */
 @media (max-width: 768px) {
-
-  /* header stacked */
   .header { flex-direction: row; align-items:center; gap:10px; padding:12px; }
   .img img { width:52px; height:52px; }
-
-  /* transform nav into hamburger friendly stack
-     we won't assume bootstrap JS toggles the nav; JS snippet provided */
   .nav { display:flex; gap:12px; align-items:center; }
-  .nav.hidden-mobile { display:none; } /* class toggled by JS when collapsed */
-
-  .botao { display:none; } /* esconde botão franqueado no header para poupar espaço (mostra no menu) */
-
-  /* quem somos empilha */
+  .nav.hidden-mobile { display:none; }
+  .botao { display:none; }
   .quem-somos-container { flex-direction:column; padding: 24px 14px; }
   .quem-somos-imagem img { max-width: 420px; height: auto; }
-
-  /* carousel */
   .img1 { height: 45vh; }
-
-  /* map reduz */
   #map { height: 320px; width: 95%; }
-
-  /* serviços: single column */
   .servico-grid { grid-template-columns: 1fr; gap: 16px; padding: 0 6px; }
   #servicos { padding: 36px 0; }
-
-  /* cards e botões ocupam largura */
   .card-servico { padding: 16px; }
   .card-servico .price-row { flex-direction: row; gap: 10px; }
   .card-servico button { padding: 10px 12px; min-width: 120px; }
-
-  /* agendamento: formulário ocupa a largura */
   #agendamento .col-md-4, #agendamento .col-md-3 { width: 100%; flex: 0 0 100%; }
-
-  /* make header text smaller */
   .quem-somos-texto h2 { font-size: 1.6rem; }
   .nav a { font-size: .95rem; padding: 6px 4px; }
-
 }
 
 /* Extra small phones */
@@ -275,5 +404,3 @@ body {
   .nav { gap: 8px; }
   .header { padding:10px; }
 }
-
-/* ---------- FIM DO CSS ---------- */
