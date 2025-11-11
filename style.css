@@ -106,14 +106,21 @@ body {
 
 /* ---------- CARROSSEL ---------- */
 /* O HTML usa bootstrap, só ajustamos img e altura */
-.carousel-inner .carousel-item { display:flex; align-items:center; justify-content:center; }
+.carousel-inner .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* altura consistente e responsiva */
+}
+
 .img1 {
   width: 100%;
-  height: 600px;
-  object-fit: cover;
+  height: 100%; /* agora a imagem ocupa toda a altura do item */
+  object-fit: cover; /* preenche cortando o excesso */
   border-radius: 10px;
-  display:block;
+  display: block;
 }
+
 
 /* botões nativos do bootstrap mantidos */
 
