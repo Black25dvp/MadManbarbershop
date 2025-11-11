@@ -131,7 +131,7 @@ body {
 
 /* ---------- CARROSSEL ---------- */
 .carousel-inner .carousel-item {
-  display: flex;
+  
   align-items: center;
   justify-content: center;
   height: 50vh; /* altura consistente */
@@ -245,10 +245,9 @@ body {
 /* imagem do mapa com limite de tamanho */
 .img2 {
   max-width: 100px;
-  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
+ 
 }
 
 /* ---------- SERVIÇOS ---------- */
