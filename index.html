@@ -409,12 +409,12 @@
   ];
   // ---------- FIM DOS DADOS ----------
   
-  const map = L.map('map', { zoomControl: false }).setView([-15.8, -47.9], 5);
-  var map = L.map('map', {
-    center: [-23.55052, -46.633308], // exemplo: São Paulo
-    zoom: 13,                        // zoom inicial
-    minZoom: 10,                      // zoom mínimo permitido
-    maxZoom: 16                       // zoom máximo permitido
+const map = L.map('map', {
+    zoomControl: false,
+    center: [-15.8, -47.9],
+    zoom: 5,
+    minZoom: 4,  // define o zoom mínimo
+    maxZoom: 10  // define o zoom máximo
 });
 
 
