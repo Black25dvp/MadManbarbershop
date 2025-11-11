@@ -466,7 +466,40 @@
 
   window.addUnit = addUnit;
 </script>
+<script><script>
+  // toggle simples para versão mobile (esconde/exibe .nav)
+  (function(){
+    // cria um botão toggle se não existir
+    const header = document.querySelector('.header');
+    if (header) {
+      let toggle = document.createElement('button');
+      toggle.innerHTML = '☰';
+      toggle.setAttribute('aria-label','Abrir menu');
+      toggle.style.cssText = 'background:transparent;border:0;color:#fff;font-size:22px;cursor:pointer;padding:6px;margin-right:8px;';
+      toggle.classList.add('mobile-menu-toggle');
 
+      // coloca antes da nav (ou no começo do header)
+      header.insertBefore(toggle, header.querySelector('.nav'));
+
+      toggle.addEventListener('click', () => {
+        const nav = document.querySelector('.nav');
+        const bot = document.querySelector('.botao');
+        if (!nav) return;
+        nav.classList.toggle('hidden-mobile');
+        // mostra botão franqueado dentro do menu quando aberto (opcional)
+        if (bot) bot.style.display = nav.classList.contains('hidden-mobile') ? 'none' : 'inline-flex';
+      });
+    }
+
+    // quando a janela muda, pede pro leaflet recalcular (se existir)
+    window.addEventListener('resize', () => {
+      if (window.map && typeof window.map.invalidateSize === 'function') {
+        setTimeout(() => window.map.invalidateSize(), 300);
+      }
+    });
+  })();
+</script>
+</script>
 </body>
 
 </html>
